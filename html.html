@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch!</title>
+    <link rel="stylesheet" href="css.css" />
+    <script defer src="js.js"></script>
+  </head>
+  <body>
+    <h1>Etch-a-Sketch!</h1>
+      <div id="change-size">
+        <div class="slider">
+        <label for="volumen">Size</label>
+        <input type="range" id="volumen" min="0" max="64" value="16" oninput="actualizarValor(this.value)">
+        <span id="valor">16</span>
+      </div>
+    <button class="button" id="reset">Reset</button>
+    <div id="container"></div>
+  </body>
+</html>
