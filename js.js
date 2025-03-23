@@ -1,6 +1,8 @@
 const divContainer = document.querySelector("#container");
 const buttonGridSize = document.querySelector("button");
 const btn = document.querySelector("#reset");
+let letters = "0123456789ABCDEF";
+let color = "#000000";
 let gridSize = 16;
 
 fillContainer();
@@ -24,7 +26,7 @@ function actualizarValor(valor) {
 
 
 btn.addEventListener("click", () => {
-  var audio = new Audio('Boom.ogg');
+  let audio = new Audio('Boom.ogg');
   audio.play();
   divContainer.removeChild(divContainer.firstChild);
   fillContainer();
@@ -62,8 +64,7 @@ function fillContainer() {
   }
 }
 function getRandomColor() {
-  var letters = "0123456789ABCDEF";
-  var color = "#";
+  color = "#";
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }

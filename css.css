@@ -5,6 +5,14 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  #etch-container {
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
   .slider{
     color: white;
     display: flex;
@@ -46,8 +54,8 @@ body {
   }
   #container {
     border: solid 2px white;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
   }
