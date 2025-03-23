@@ -12,12 +12,13 @@
         <h1>Etch A Sketch!</h1>
       </div>
           <div id="change-size">
-            <input id="base" type="color" name="base" value="#000000" />
+            <input id="color-picker" type="color" name="base" value="#000000" />
             <div class="slider">
             <label for="volumen">Size</label>
             <input type="range" id="volumen" min="1" max="64" value="16" oninput="actualizarValor(this.value)">
           <span id="valor">16</span>
           <div id="container"></div>
+          <div id="container-background"></div>
         </div>
         <button class="button" id="reset">Reset</button>
         <button class="button" id="random" onclick="getRandomColor()">Random</button>

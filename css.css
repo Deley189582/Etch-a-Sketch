@@ -53,9 +53,17 @@ body {
     transform: translateY(4px);
   }
   #container {
-    border: solid 2px white;
+    border: solid 2px #ffffff;
     width: 600px;
     height: 600px;
     display: flex;
     flex-wrap: wrap;
+  }
+  #container-background {
+    position: absolute;
+    background: black;
+    top: 173px;
+    width: 600px;
+    height: 600px;
+    z-index: -1;
   }

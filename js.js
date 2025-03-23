@@ -2,8 +2,10 @@ const divContainer = document.querySelector("#container");
 const buttonGridSize = document.querySelector("button");
 const btn = document.querySelector("#reset");
 let letters = "0123456789ABCDEF";
-let color = "#000000";
 let gridSize = 16;
+
+let colorPicker;
+const color = "#ff0000";
 
 fillContainer();
 
@@ -50,7 +52,7 @@ function fillContainer() {
 
       divGrid.addEventListener("mouseover", () => {
         if (divGrid.dataset.interactionCounter == 0) {
-          divGrid.style.backgroundColor = getRandomColor();
+          divGrid.style.backgroundColor = getCurrentColor();
         }
         let opacity = 1 - +divGrid.dataset.interactionCounter * 0.1;
 
@@ -63,10 +65,18 @@ function fillContainer() {
     }
   }
 }
+
+function getCurrentColor() {
+colorPicker = document.querySelector("#color-picker");
+colorPicker.value = color;
+colorPicker.select();
+}
+
+/* }
 function getRandomColor() {
   color = "#";
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
-}
+} */
